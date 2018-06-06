@@ -8,7 +8,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ###############################################################################
 #
-# TODO: 2.
+# Done.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -32,6 +32,8 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
+    tag()
     turtle3()
     turtle2()
     turtle2()
@@ -104,9 +106,50 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    """
+    Defines a simple turtle
+    sets turtle's pen
+    moves turtle
+    """
+    fred = rg.SimpleTurtle('turtle')
+    fred.speed = 5
+    fred.pen = rg.Pen('red', 1)
+
+    fred.left(180)
+    fred.forward(200)
+    fred.left(45)
+    fred.forward(50)
+    fred.right(45)
+    fred.forward(50)
+    fred.right(45)
+    fred.forward(50)
+    fred.right(45)
+    fred.forward(50)
+
+
+def tag():
+    """
+    makes two turtles play tag and chase around the board
+    """
+    george = rg.SimpleTurtle('turtle')
+    george.pen = rg.Pen('green', 5)
+
+    steve = rg.SimpleTurtle('turtle')
+    steve.pen = rg.Pen('orange', 2)
+
+    george.draw_circle(100)
+    steve.draw_circle(100)
+
+    george.right(135)
+    george.backward(300)
+    steve.left(45)
+    steve.forward(300)
+
+
 ###############################################################################
 #
-# TODO: 3.
+# Done
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -138,7 +181,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# done
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +211,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# done
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +227,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# done
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
@@ -211,7 +254,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 7.
+# done
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
